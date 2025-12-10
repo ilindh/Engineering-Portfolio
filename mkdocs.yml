@@ -1,0 +1,26 @@
+site_name: Engineering Portfolio
+site_url: https://ilindh.github.io/portfolio/
+repo_url: https://github.com/ilindh/Engineering-Portfolio
+theme:
+  name: material
+  palette: 
+    scheme: default # 'slate' for dark mode
+    primary: indigo
+    accent: cyan
+  features:
+    - navigation.tabs # Tabs
+    - navigation.sections
+markdown_extensions:
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  
+nav:
+  - Home: index.md
+  - Studies: studies.md
+  - Projects:
+      - The Industrial Drone: projects/industrial-drone.md
+      - The Monorotor: projects/monorotor.md
+      - The Drone Motor Test bench: projects/testbench.md
+      - 3D Printer Enclosure Temp Control: projects/3D-printer-temp-control.md
+      - The RC car!: projects/rcCar.md
