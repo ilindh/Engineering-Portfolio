@@ -1,30 +1,50 @@
 # Engineering Portfolio
 Welcome to my portfolio! Over the past four years of studying Electrical Engineering and Electronics at LUT University, I have worked on numerous practical projects that demonstrate my skills and passion for the field. This site serves as a showcase of that work.
 
-Feel free to explore my projects via the "Projects" tab! Not all of them have been included here yet and more are very likely to be coming soon!
+Feel free to explore my projects via the "Projects" tab! The portfolio is a work in progress and will be updated as I finish new projects!
 
 [Explore Projects](projects/industrial-drone.md){ .md-button .md-button--primary }
 
-## My strengths / interests / key skills that I have developed over the years
+## My Key Skills & Interests
 
-- Strong system-level perception. I have a good grasp of projects and even large-scale entities, and I quickly understand how a project should be implemented.
+Here is a quick summary of my skills and interests
 
-**My main interests are in:**
+-**System-level thinking**
 
--**General electronics** (small signals, power regulation, pcb design, good EMI practices) and **Power electronics**
+  - I have typically a good grasp of the "big picture", and I understand how different pieces come together.
+  - I prioritize understanding how things work at a fundamental level.
 
-  - **Wearable electronics**. Dealing with battery operated very high efficiency mixed signal measurement boards
-  - Measurement devices, controllers, espcially antything that can be held in hands and has a direct practical application! 
+-**Electronics design**
 
--**Embedded Electronics / Embedded systems**
+  - Small Signals, Mixed Signals, Power Regulation, PCB Design, Good EMI Practices, Controllers and Power Electronics.
+  - Wearable electronics: Dealing with battery operated high efficiency mixed signal measurement boards.
+  - Measurement boards and IMUs: I have work experience with custom measurement boards based on inertial measurement sensors (IMU) and magnetometers.
+  - I am especially interested in anything that can be held in hands and has a direct practical application!
 
--**Embedded coding (RTOSes, C, C++)**
 
-  - I have exprience with Zephyr RTOS and FreeRTOS, pure C and Arduino / ESP32 C++ stuff 
-  - I have also some experience on the Zybo Z7 and STM32 platforms
+-**Embedded systems**
 
--**3D printing / mechanical design**
+  - Programming: C, C++
+  - Other languages I have used: Python, Java, HTML, CSS, JavaScript
+  - RTOS: I have experience with Zephyr RTOS and FreeRTOS 
+  - Platforms: I have worked with nRF52 / nRF52840, Zybo Z7 (Zynq 7000), ESP32 and STM32 platforms
 
-  - Calibrating printer (flow, pressure advance, speed / quality, tolerances, diagnosing various issues), understading different materials and their behaviour (strength / quality).
-  - Experience with Creality Ender 3 S1 pro, Creality K1C and Bambulabs X1 Enterprice. I currently own a temperamental K1C.
-  
+-**Control systems and Digital Signal Processing**
+
+  - Motivation: I view mathematics and control theory as powerful tools in Embedded Systems. I have taken extra courses and built personal projects to master these tools for practical applications.
+  - DSP: I am interested in digital filters and algorithms. I have experience with complementary filtering and digital LPF / HPF filtering
+  - IMU dataprocessing: I have work experience with human measurements based on IMU sensors.
+    
+    - I have implemented a complementary filter for angle calculation.
+    - I have studied magnetic sensor calibration and various other calibration methods relating to 3D orientation and its calculation.
+    - Future goal: Implementing a Kalman filter for IMU sensor orientation processing on Embedded Hardware.
+
+
+-**3D printing and mechanical design**
+
+  - 3D Modelling: SolidWorks, OnShape.
+  - Calibration: flow, pressure advance, speed / quality, tolerances, diagnosing various issues. 
+  - Process knowledge: Understanding how different materials affect the printing process and the end result (strength / quality).
+  - I have experience with Creality Ender 3 S1 pro, Creality K1C and Bambu Lab X1 Enterprise. 
+    - I currently own a temperamental K1C.
+

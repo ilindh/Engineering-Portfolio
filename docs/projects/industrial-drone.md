@@ -5,25 +5,25 @@
   <p><em> </em></p>
 </div>
 
-I’ve always wanted to build my own drone, so in 2023 I finally decided to make it happen. A drone is the perfect project for me because it combines almost all of my interests: power electronics, digital electroncis, RF stuff, mechanics, embedded software etc. I chose to build a larger 'industrial-style' platform to serve as a platform for my own future custom attachments and experiments.
+I’ve always wanted to build my own drone, so in 2023 I finally decided to make it happen. A drone is the perfect project for me because it combines all of my interests: power electronics, digital electroncis, RF communication, mechanics, embedded software. I chose to build a larger 'industrial-style' platform to serve as a platform for my own future custom attachments and experiments.
 
-While the project utilized commercial components, the system integration was a challenge. Work began in late 2023 when a mountain of parts arrived without instructions. To turn them into a functional aircraft, I designed and 3D printed custom mounts for nearly every subsystem—including cameras, batteries, antennas, and power distribution electronics.
+While the project used mostly commercial components, the system integration was a challenge. Work began in late 2023 when a mountain of parts arrived without instructions. To turn them into a functional drone, I designed and 3D printed custom mounts for nearly every subsystem—including cameras, batteries, antennas, and power distribution electronics.
 
 **Key learnings:**
   
-  - ArduPilot flight controller software.
-  - Drone systems: Basic components, battery technologies, wireless communication, protocols, control electronics
+  - ArduPilot flight controller configuration.
+  - Drone systems: Basic components, battery technologies, wireless communication and protocols (MavLink, ELRS), and control electronics.
   - Practical electronics skills.
-  - Strong knowledge and practical experience on 3D printing (PLA, PETG) and 3D modelling (SolidWorks, onshape).
+  - Deep dive on 3D printing (PLA, PETG) and 3D modelling (SolidWorks, OnShape).
 
 **Future of the project:** 
   
   - Design of my own power distribution board that measures current, filters the power and regualtes it for the electronics.
-  - I am planning on desigining my own gimbal / camera orientation control system for the drone. 
+  - Developing my own gimbal / camera orientation control system for the drone. 
 
 ## Project Details
 
-The project began with system simulation using eCalc to define the optimal powertrain. The motor, propeller, and ESC combination was selected to maximize payload capacity while ensuring high efficiency for extended flight times. Simulations indicated that an 11x4.5 propeller configuration offered the best performance. A 4S battery architecture was chosen to minimize overall system weight and cost without compromising the required energy capacity. The final design achieves a theoretical thrust-to-weight ratio of 3:1 and a hover flight time of approximately 24 minutes, providing a lifting capacity of 3–4 kg with ample margin for future accessories.
+The project began with system simulation using eCalc to define the optimal powertrain. The motor, propeller, and ESC combination was selected to maximize payload capacity while ensuring high efficiency for extended flight times. Simulations indicated that an 11x4.5 propeller configuration offered the best performance. A 4S battery architecture was chosen to minimize overall system weight and costs. The final design has, accoring to the simulations, a theoretical thrust-to-weight ratio of 3:1 and a hover flight time of approximately 24 minutes, providing a lifting capacity of 3–4 kg with ample margin for future accessories.
 
 <div align="center">
   <img src="../../images/drone/simulations.png" width="750" />
@@ -49,14 +49,15 @@ The project began with system simulation using eCalc to define the optimal power
   - Frame: F450 Carbon Fiber with retracting arms
   - VTX: Walksnail Avatar HD Pro kit V2
 
-As said before, I had to design practically all the mounts to every separate component of the drone. The frame is a generic carbon fiber frame which had no mounts for the battery or gopro or almost anything. The project began on an empty frame and 1000 separate bags of parts and accessories.
+The frame is a generic carbon fiber kit which arrived with no mounts for the battery, GoPro, or other peripherals. Starting with just the bare frame and countless bags of parts, I had to design custom mounts for practically every separate component to create a the complete drone system.
 
 <div align="center">
   <img src="../../images/drone/frame.jpg" width="700" />
-  <p><em> </em></p>
+  <p><em> The F450 carbon fiber frame. </em></p>
 </div>
 
 ### Battery Mount and Power Distribution
+
 Since this drone is quite large and uses large batteries (~10 000 mAh / 4s) I used a separate RC car battery holder that was meant for heavy batteries. It was installed upside down on the drone with custom 3D printed mounts. The drone has a current sensor which I designed to lay in between the battery mount and the frame. This saved space and led to a convenient position for the battery XT-connectors.
 
 <div align="center">
@@ -69,7 +70,7 @@ Since this drone is quite large and uses large batteries (~10 000 mAh / 4s) I us
   <p><em> </em></p>
 </div>
 
-The current sensor led to the Power Distribution Unit (PDU) that split the battery to the ESCs and regulates it for the flight controller and other perihperals. Mateksys XCLASS PDB FCHUB-12S was selected for its high current rating and peripheral controllability. With this PDB it was possible to control the easily overheating video transmitter (VTX) on or off with the remote controller while on the ground.
+The current sensor feeds into the Power Distribution Unit (PDU), which splits power to the ESCs and regulates voltage for the flight controller and peripherals. I selected the Mateksys FCHUB-12S for its high current rating and control features, allowing me to toggle the video transmitter (VTX) via the remote controller to prevent overheating while on the ground.
 
 <div align="center">
   <img src="../../images/drone/PDU.jpg" width="700" />
@@ -78,7 +79,7 @@ The current sensor led to the Power Distribution Unit (PDU) that split the batte
 
 ### Wiring and Cable Management
 
-The entire project and all wiring were done as well as I could. I did all the soldering as well as I could, and almost every wire was neatly sheathed and pulled. The drone was also designed to be as modular and maintenance-free as possible. High-quality XT connectors or bullet connectors were used throughout so that everything can be disassembled for improvements or repairs if necessary.
+Reliability was a key priority for this build. I focused heavily on clean soldering (with flux) and cable management; almost every wire is neatly sheathed and routed to prevent snagging or vibration damage. The drone is designed to be modular and maintenance-friendly. High-quality XT and bullet connectors are used throughout, allowing components to be easily disassembled for upgrades or repairs.
 
 <div align="center">
   <img src="../../images/drone/ESCs.jpg" width="700" />
@@ -92,7 +93,9 @@ The entire project and all wiring were done as well as I could. I did all the so
 
 ### Accessory Mounts
 
-I designed a custom accessory mount and camera mount for GoPro. This generic accessory mount can be attached to virtually any custom mount for cameras or lights or anything. The accessory mount has 45x45mm mountingholes that can be screwed into anything. On top is an FPV camera mount with an adjustable angle. A separate mount was designed for the FPV camera's video transmitter to keep it in a cooling air stream. The dual antennas are positioned at an angle of approximately 50 degrees in a V-formation facing downwards to maximize the range of the video link.
+To make the platform versatile, I designed a modular accessory mount system. It features a 45x45mm mounting holes, allowing virtually any custom device—from cameras to sensors—to be attached securely. In the future I am interested in desining a camera gimbal that fits on the accessory mount system.
+
+Currently, it can host a GoPro mount, a separate flashlight mount and an adjustable FPV camera mount. I also designed a specific holder for the FPV video transmitter to ensure it sits in the prop wash for cooling. The dual antennas are positioned in a V-formation at approximately 50 degrees to maximize video link range and signal diversity.
 
 <div align="center">
   <img src="../../images/drone/camera_mount.jpg" width="700" />
@@ -106,7 +109,8 @@ I designed a custom accessory mount and camera mount for GoPro. This generic acc
 
 
 
-The drone uses the ELRS protocol with the controller. I chose the Radiomaster RP3 ELRS transceiver with two antennas. A custom mount was also designed and 3D printed for this.
+The drone uses the ELRS protocol with the controller. I chose the Radiomaster RP3 ELRS transceiver with two antennas. A custom mount was also designed and 3D printed for this. The drone also has Telemetry link over MavLink and the drone or its status can be controlled from a laptop. The drone is also equipped with GPS and suits for completely automated missions.
+
 <div align="center">
   <img src="../../images/drone/ELRS_mount.jpg" width="700" />
   <p><em> </em></p>

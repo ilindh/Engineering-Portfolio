@@ -47,7 +47,7 @@ A marginally stable open loop step response was found manually. A throttle walue
 <!-- <img width="2643" height="1569" alt="open_loop_stepresponse" src="https://github.com/user-attachments/assets/27c261d3-6018-43be-b801-b0dd6444b99a" /> --> 
 
 <div align="center">
-  <img src="../../images/rccar/open_loop_stepresponse.png" width="700" />
+  <img src="../../images/monorotor/open_loop_stepresponse.png" width="700" />
   <p><em>Open loop step-response.</em></p>
 </div>
 
