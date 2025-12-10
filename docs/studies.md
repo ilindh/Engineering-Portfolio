@@ -1,6 +1,6 @@
 ## Studies
 
-I am currently a first-year Masters's student at university (4th year overall). I am looking for Master's thesis opportunities!
+I am currently a first-year Master's student at university (4th year overall). I am looking for Master's thesis opportunities!
 
 **Bachelors**:  
 
@@ -15,31 +15,36 @@ I am currently a first-year Masters's student at university (4th year overall). 
 
 ## My favourite / otherwise relevant courses:
 
-  - Applied Mathematics 1
-    - Key takeaways: Im definitely not  the best at maths but I like it! Numerical mathematics / methods support programming and digital dataprocessing nicely!
+  - Applied Mathematics 1 _(on-going)_
+    - Key takeaways: Numerical mathematics / numerical methods support programming and digital dataprocessing nicely!
 
   - C-ohjelmointi (C-programming)
-    - Key takeaways: Basic experience in C-language. Pointers, variable types, memory handlign (malloc) etc.
+    - Key takeaways: Experience in C-language. Pointers, variable types, memory handling (malloc) etc.
 
   - Olio-ohjelmointi (Object-oriented programming)
-    - Key takeaways: Object-oriented thinking, general software development, Java / Android studio
+    - Key takeaways: Object-oriented programming model and thinking, general software development, Java / Android studio
 
   - Introduction to Web Development
-    - Key takeaways: CSS, JavaScript, HTML. Learned some interesting frontend stuff! Built a wether app website as my project work.
+    - Key takeaways: CSS, JavaScript, HTML. Gained some experience with web development tools (AJAX, Leaflet, Bootstrap, Interaction with APIs, JSON manipulation)! Built a weather app website as my project work and achieved full points!
 
-  - Säätötekniikan perusteet (Basics of control)
-    - Key takeaways: I have a love hate relationship with control engineering. Very interesting and extremely usefull stuff but requires time to understand.
+  - Basics of Control Engineering
+    - Key takeaways:
+      - Gained a solid understanding of system analysis, stability analysis (Bode, Nyquist, Root Locus), and the fundamentals of control loops
 
-  - Digital Control 1
-    - Key takeaways: Very interesting course. I took this course purely for my own enjoyment as an extra.
+  - Digital Control 1 _(on-going)_
+    - Key takeaways: 
+      - Deep dive into discrete control systems, discretization, state-space models.
+      - Very interesting course. I took this course purely for my own enjoyment as an extra.
 
   - Electronics Project 
-    - Key takeaways: Masters level project course. We did a project for Biovaaka Oy. Learned a lot about working for a real customer. My role was software developer / bluetooth expert.
+    - Key takeaways: Masters level project course. We did a project for a company. Learned a lot about working for a real customer. My role was software developer / Bluetooth developer.
 
-  - Electronics Laboratory 1 / 2 (laboratory / project courses), Analog Electronics 1 / 2 (laboratory / project courses), Basics of Electronics 2 (project course)
-    - Key takeaways: I have strong background in practical hands on work with electronics and teamwork. I like projects where you get to solve problems and learn through practical experience.
+  - Electronics Laboratory 1 / 2 (laboratory / project courses), Analog Electronics 1 / 2 (laboratory / project courses) and Basics of Electronics 2 (project course)
+    - Key takeaways: I have strong background in practical laboratory work with electronics. I like projects where you get to solve problems and learn through practical experience.
 
-  - Introduction to Embedded Systems / Introduction Embedded System Programming
+  - Introduction to Embedded Systems and Introduction Embedded System Programming (on-going)
+    
     - Key takeaways:
+
       - I was able to deepen my interest in embedded systems.
-      - I purchased a Zybo Z7 board, which is used in the course.  The programming course as a projcet work and the task is to implement converter code. I had a good grasp of the project from the beginning and was appointed as the project manager. I delegate tasks, design system architecture / structure, and implement the final code merge on my own Zybo.
+      - I purchased a Zybo Z7 board, which is used in the course. The programming course as a project work and the task is to implement converter code. I had a good grasp of the project from the beginning and was appointed as the project manager. I delegate tasks, design system architecture / structure, and implement the final code merge on my own Zybo.
