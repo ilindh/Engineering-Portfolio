@@ -1,0 +1,1031 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ilindh.github.io/portfolio/projects/testbench/">
+      
+      
+        <link rel="prev" href="../monorotor/">
+      
+      
+        <link rel="next" href="../3D-printer-temp-control/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>The Drone Motor Test bench - Engineering Portfolio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-drone-motor-testbench-work-in-progress" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Engineering Portfolio" class="md-header__button md-logo" aria-label="Engineering Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Engineering Portfolio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Drone Motor Test bench
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ilindh/Engineering-Portfolio" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../studies/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Studies
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../industrial-drone/" class="md-tabs__link">
+          
+  
+  
+  Projects
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Engineering Portfolio" class="md-nav__button md-logo" aria-label="Engineering Portfolio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Engineering Portfolio
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ilindh/Engineering-Portfolio" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../studies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Studies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../industrial-drone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Industrial Drone
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monorotor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Monorotor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Drone Motor Test bench
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Drone Motor Test bench
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-drone-motor-testbench-work-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Drone Motor Testbench (Work in Progress)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Drone Motor Testbench (Work in Progress)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-description-of-the-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General description of the device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planned-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planned features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-progress-initial-designs-very-much-subject-to-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Progress / Initial Designs (Very much Subject to Change)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component Selection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adcs-and-buffering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADCs and buffering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power regulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCB design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3D-printer-temp-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3D Printer Enclosure Temp Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rcCar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The RC car!
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-drone-motor-testbench-work-in-progress" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Drone Motor Testbench (Work in Progress)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Drone Motor Testbench (Work in Progress)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general-description-of-the-device" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General description of the device
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planned-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planned features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#target-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target specifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-progress-initial-designs-very-much-subject-to-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Progress / Initial Designs (Very much Subject to Change)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Component Selection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adcs-and-buffering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ADCs and buffering
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power regulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcb-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PCB design
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>The Drone Motor Test bench</h1>
+
+<h2 id="the-drone-motor-testbench-work-in-progress">The Drone Motor Testbench (Work in Progress)</h2>
+<p>This is a personal project that is a work in progress. The idea for this project arose from the need to optimize motor-propeller combinations for the industrial drone project.</p>
+<h3 id="general-description-of-the-device">General description of the device</h3>
+<p>The aim of the project is to design and implement a test bench suitable for drone motors, capable of measuring the current, voltage and power of the drone motor, the rotational speed of the motor or blades, and the thrust generated by the motor. The idea is that different combinations of motors, propellers, and motor controllers can be tested to achieve the best efficiency.</p>
+<p>The device measures the motor's current and voltage which can be used to calculate the power taken from the battery. The device measures the thrust generated by the motor with a load cell that is mechanically coupled to the motor. The propeller rotational speed is also measured with an optical sensor.</p>
+<h3 id="planned-features">Planned features</h3>
+<ul>
+<li>Compatibility for various types of motors and motor controllers.</li>
+<li>Web UI for graphing measurement results in real time</li>
+<li>Battery operable from typical drone batteries (input voltage range up to 30 V) </li>
+<li>Automated test sequences</li>
+</ul>
+<h3 id="target-specifications">Target specifications</h3>
+<p>Current measurements:</p>
+<ul>
+<li>Max Current: 60 A</li>
+<li>Accuracy:   100 mA</li>
+<li>Resolution: 10 mA.</li>
+<li>Bandwidth: 10 kHz.</li>
+</ul>
+<p>Voltage measurements:</p>
+<ul>
+<li>Max input Voltage: 30 V</li>
+<li>Accuracy: 100 mV</li>
+<li>Resolution: 10 mV.</li>
+<li>Bandwidth: 10 kHz.</li>
+</ul>
+<p>Thrust measurements:</p>
+<ul>
+<li>Range: 0-5 kg</li>
+<li>Accuracy: 20g</li>
+<li>Resolution: 10g</li>
+</ul>
+<p>Propeller measurements:</p>
+<ul>
+<li>Rotational speed: 20 000 rpm</li>
+<li>Accuracy: 100 rpm</li>
+</ul>
+<h3 id="current-progress-initial-designs-very-much-subject-to-change">Current Progress / Initial Designs <strong>(Very much Subject to Change)</strong></h3>
+<p>The initial plan for the system has been created and is shown in the block diagram below. The exact components may still change. In particular, the ADCs may still be changed. The goal is to implement the different parts of the system step by step and eventually integrate everything onto a single circuit board.</p>
+<p>The project is intended to be as modular as possible so that it can be developed in parts. For example, a cost effective and readily available generic load cell + HX711 ADC combination was been chosen for thrust measurement. This will be replaced later with a higher-quality solution later on. </p>
+<div align="center">
+  <img src="../../images/testbench/simplified_system_block_diagram_V2.png" width="700" />
+  <p><em> System block diagram (WIP).</em></p>
+</div>
+
+<h3 id="component-selection">Component Selection</h3>
+<p>The ESP32 was chosen as the microprocessor because it has Wifi capability and can stream the measurement results via a web server UI. </p>
+<h4 id="current-measurement">Current Measurement</h4>
+<p>The Allegro Microsystems ACS37032-065B3 Hall-effect current sensor was selected for the project because it met all the requirements and was reasonably priced. In addition, the package is easy to solder by hand and the sensor appeared to be simple to use.</p>
+<p><a href="https://www.mouser.com/catalog/specsheets/Allegro_MicroSystems_01032024_ACS37030-32-Datasheet.pdf">Datasheet:</a></p>
+<p>The sensor is capable of measuring current up to 65 amps with a bandwidth of 5 MHz, which is sufficient for one drone motor and meets the project requirements. The sensor produces a voltage proportional to the current passing through with a sensitivity of 20.3 mV/A. At full 65 A current, the sensor produces an output voltage of approximately 1.32 V. Although the internal resistance of the measurement circuit is low (0.6 mΩ), the power loss generated at peak currents is significant (2.5 W) and requires sufficient cooling.</p>
+<p>The ACS772LCB-100B-SMT-T might have been a better choice for the current sensor. Its internal resistance is only 100 micro-ohms, so it would have been better able to withstand continuous loading. In addition, its current measurement range is up to 100 A, so it could also have been used with larger motors.</p>
+<p><a href="https://www.allegromicro.com/~/media/files/datasheets/acs772-datasheet.pdf">Datasheet:</a></p>
+<h4 id="adcs-and-buffering">ADCs and buffering</h4>
+<p>The 16-bit Microchip MCP33131 ADCs were chosen for their high sampling rate (up to 1 Msps). Since the MCP33131 uses a Successive Approximation Register (SAR) architecture, it draws a dynamic current during the acquisition phase. To prevent voltage droop and ensure measurement accuracy, an op-amp voltage buffer was implemented in the signal path.</p>
+<p>The MCP6022 dual op-amp was selected as the buffer due to its high Gain Bandwidth Product (10 MHz) and cost-effectiveness. Its Rail-to-Rail Input/Output (RRIO) capability is essential for this single-supply, low-voltage system. The signal path design is iterative; future versions will include tuned anti-aliasing filters to further improve signal integrity.</p>
+<div align="center">
+  <img src="../../images/testbench/measurements_1.png" width="700" />
+  <p><em> Sensors and ADCs (WIP). </em></p>
+</div>
+
+<h4 id="power-regulation">Power regulation</h4>
+<p>The power architecture is divided into two stages to ensure signal integrity and efficiency.</p>
+<p>Analog and Digital Logic: The MCP33131 ADC requires a clean 1.8 V analog supply, while its digital interface supports voltages from 2.5 V to 5 V. A 3.3 V rail was selected for the digital interface to match the ESP32’s SPI logic levels directly. To minimize noise coupling and ensure measurement accuracy, all sensitive analog components (ADC, Op-Amps, and sensors) are powered via dedicated Low Dropout Regulators (LDOs).</p>
+<p>Primary Power Stage: The main system power—supplying the ESP32, LDO inputs, and the cooling fan—is handled by a DC-DC buck converter stage. This stage is implemented using the TPS62933 synchronous buck converter. The IC supports a wide input voltage range of 3.8 V to 30 V, which provides significant flexibility: the test bench electronics can be powered directly by almost any standard drone battery pack (ranging from 1S to 6S) independent of the motor power supply.</p>
+<div align="center">
+  <img src="../../images/testbench/power_stage_1.png" width="700" />
+  <p><em> Power regulators (WIP).</em></p>
+</div>
+
+<h3 id="pcb-design">PCB design</h3>
+<p>The PCB design is currently in the preliminary layout phase. The physical dimensions of the board are largely dictated by the ESP32 Development Kit footprint, which was chosen to accelerate the prototyping process.</p>
+<p>Handling currents up to 65 A requires special attention in the layout. The design features wide, exposed copper planes (soldermask removed) on both top and bottom layers. This allows for manual solder tinning to increase the effective conductor thickness, thereby reducing resistance and improving thermal management.</p>
+<p>Things that will be considered in the build:</p>
+<ul>
+<li>Stackup: Planned 4-layer configuration (SIG/PWR – GND – GND – SIG) to ensure solid return paths and noise suppression.</li>
+<li>Signal Integrity: Series termination on high-speed SPI buses; impedance-controlled routing for critical signals.</li>
+<li>Mixed-Signal Layout: Strict physical separation between digital logic and sensitive analog domains; minimized trace lengths for analog signals.</li>
+<li>High Current Path: Reinforced copper pours exposed for solder tinning to handle up to 65 A in the measurement section.</li>
+<li>Thermal Management: Component placement optimized for airflow and heat dissipation, particularly for the current measurement and regulators.</li>
+<li>Modularity: Design allows for future upgrades or swapping of specific sub-circuits.</li>
+<li>ESD / polarity protection of inputs</li>
+<li>Testpoints and proper silkscreens</li>
+</ul>
+<div align="center">
+  <img src="../../images/testbench/initial_pcb_3d.png" width="700" />
+  <p><em> Draft of the PCB design. </em></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
