@@ -629,6 +629,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#thrust-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thrust measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -920,6 +931,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#thrust-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thrust measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1108,6 +1130,14 @@
 <div align="center">
   <img src="../../images/testbench/differential_opamps.png" width="700" />
   <p><em> Differential operational amplifiers. </em></p>
+</div>
+
+<h5 id="thrust-measurement">Thrust measurement</h5>
+<p>The thrust measurement stage currently utilizes an HX711 module, although its 20 SPS sampling rate is notably low compared to the high-speed sensors used in the rest of the system. To balance cost-effectiveness with design flexibility, the load cell ADC circuitry was implemented modularly rather than being integrated directly onto the main board.</p>
+<p>This modular approach is achieved through dual-sized headers on the PCB, supporting the direct use of a standard HX711 or alternative commercial modules like the CS1238. Additionally, these headers provide the versatility to interface with a custom-designed ADC board should higher performance be required in future iterations.</p>
+<div align="center">
+  <img src="../../images/testbench/loadcell_module.png" width="700" />
+  <p><em> Modular design for the load cell ADCs. </em></p>
 </div>
 
 <h4 id="power-architecture-and-signal-integrity">Power Architecture and Signal Integrity</h4>
