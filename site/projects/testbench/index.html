@@ -629,6 +629,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#thrust-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thrust measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -920,6 +931,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#thrust-measurement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thrust measurement
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1110,6 +1132,14 @@
   <p><em> Differential operational amplifiers. </em></p>
 </div>
 
+<h5 id="thrust-measurement">Thrust measurement</h5>
+<p>The thrust measurement stage currently utilizes an HX711 module, although its 20 SPS sampling rate is notably low compared to the high-speed sensors used in the rest of the system. To balance cost-effectiveness with design flexibility, the load cell ADC circuitry was implemented modularly rather than being integrated directly onto the main board.</p>
+<p>This modular approach is achieved through dual-sized headers on the PCB, supporting the direct use of a standard HX711 or alternative commercial modules like the CS1238. Additionally, these headers provide the versatility to interface with a custom-designed ADC board should higher performance be required in future iterations.</p>
+<div align="center">
+  <img src="../../images/testbench/loadcell_module.png" width="700" />
+  <p><em> Modular design for the load cell ADCs. </em></p>
+</div>
+
 <h4 id="power-architecture-and-signal-integrity">Power Architecture and Signal Integrity</h4>
 <p>The power architecture is implemented in multiple stages to prioritize signal integrity, high-frequency noise rejection, and overall system efficiency.</p>
 <h5 id="primary-buck-regulation-stage">Primary Buck Regulation Stage</h5>
@@ -1150,7 +1180,7 @@
 <li>Separated and partly split ground planes block high amplitude and high frequency / noisy motor current from the measurement side.</li>
 <li>Current return paths. Tried to minimize crossing return paths for digital and analog circuitry.</li>
 <li>High current specialities: </li>
-<li>Plane / trance current dimensioning: Calculated and estimated the required trace thickness and width for the application.</li>
+<li>Plane / trace current dimensioning: Calculated and estimated the required trace thickness and width for the application.</li>
 <li>Thermal design. Located hot high current planes on its own side of the PCB with separated ground planes to mitigate conductive heat transfer to the measurement electrronics. Impelemented high current path with exposed copper layers and two 1 oz planes tied together for + and - routes to allow adding a layer of solder to the high current path. This is mainly to improve thermal capabilities as tin has roughly 5-10x worse electrical conducitivity than the copper on the power plane.</li>
 <li>Tried to minimize the loop inductance for the high current. This was a bit difficult due to bulky connectors and requirement of using multiple layers and many vias for the current route.</li>
 <li>Mechanical design: This PCB will be used in a functional device which required that the usability and mechanical design was also taken into account during PCB design.</li>

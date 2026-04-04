@@ -170,7 +170,7 @@ Things I have considered during layout:
 - Separated and partly split ground planes block high amplitude and high frequency / noisy motor current from the measurement side.
 - Current return paths. Tried to minimize crossing return paths for digital and analog circuitry.
 - High current specialities: 
-  - Plane / trance current dimensioning: Calculated and estimated the required trace thickness and width for the application.
+  - Plane / trace current dimensioning: Calculated and estimated the required trace thickness and width for the application.
   - Thermal design. Located hot high current planes on its own side of the PCB with separated ground planes to mitigate conductive heat transfer to the measurement electrronics. Impelemented high current path with exposed copper layers and two 1 oz planes tied together for + and - routes to allow adding a layer of solder to the high current path. This is mainly to improve thermal capabilities as tin has roughly 5-10x worse electrical conducitivity than the copper on the power plane.
   - Tried to minimize the loop inductance for the high current. This was a bit difficult due to bulky connectors and requirement of using multiple layers and many vias for the current route.
 - Mechanical design: This PCB will be used in a functional device which required that the usability and mechanical design was also taken into account during PCB design.
