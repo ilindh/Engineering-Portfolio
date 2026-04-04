@@ -107,6 +107,17 @@ Passive Anti-Aliasing Filter: A final RC low-pass filter consisting of a 22 ohm 
   <p><em> Differential operational amplifiers. </em></p>
 </div>
 
+##### Thrust measurement
+
+The thrust measurement stage currently utilizes an HX711 module, although its 20 SPS sampling rate is notably low compared to the high-speed sensors used in the rest of the system. To balance cost-effectiveness with design flexibility, the load cell ADC circuitry was implemented modularly rather than being integrated directly onto the main board.
+
+This modular approach is achieved through dual-sized headers on the PCB, supporting the direct use of a standard HX711 or alternative commercial modules like the CS1238. Additionally, these headers provide the versatility to interface with a custom-designed ADC board should higher performance be required in future iterations.
+
+<div align="center">
+  <img src="../../images/testbench/loadcell_module.png" width="700" />
+  <p><em> Modular design for the load cell ADCs. </em></p>
+</div>
+
 #### Power Architecture and Signal Integrity
 
 The power architecture is implemented in multiple stages to prioritize signal integrity, high-frequency noise rejection, and overall system efficiency.
